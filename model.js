@@ -164,3 +164,71 @@
 //     default:
 //         console.log("Fail");
 // }
+
+
+// let books = ["python","java","c++"]
+
+// console.log(books)
+// books.pop()
+// books.push("english")
+// books.pop()
+// console.log(books)
+
+// books.push("Tamil")
+// books.pop()
+// console.log(books)
+
+// let book = {
+//     title: "Array",
+//     author: "premkumar",
+//     price: 550,
+//     pages: 450
+// };
+// console.log(book.title);
+// console.log(book.author);
+
+// let book = {
+//     title: "JavaScript Guide",
+//     author: "prem",
+//     price: 300,
+//     display: function(){
+//         console.log(`Book: ${this.title}`,`Author: ${this.author}`,`Price: ${this.price}`);
+//     }
+// }
+// book.display();.
+
+// function totalPrice(price, quantity){
+//     return price * quantity;
+// }
+// let total = totalPrice(500,2);
+// console.log(total);
+
+// let books = ["Python","JavaScript","Django","React"];
+
+// for(let i=0;i<books.length;i++){
+//     console.log(books[i]);
+// }
+
+// let books = [
+
+// {
+// title: "Python",
+// author: "a",
+// price: 500
+// },
+
+// {
+// title: "JavaScript",
+// author: "b",
+// price: 450
+// },
+
+// {
+// title: "Django",
+// author: "c",
+// price: 600
+// }
+
+// ];
+
+// console.log(books[0].title);
