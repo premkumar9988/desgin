@@ -1,31 +1,125 @@
-let cart = 0;
 
-function addToCart(){
-cart++;
-document.getElementById("cartCount").innerText = cart;
-alert("Book added to cart!");
+let name = "Prem";
+let course = "JavaScript";
+
+let message = `Hello ${name}, welcome to the ${course} course`;
+console.log(message);
+
+
+
+let books = ["Python","Java","English","Tamil"];
+console.log(books);
+
+let techBooks = ["Python","Java"];
+let languageBooks = ["English","Tamil"];
+
+let allBooks = [...techBooks,...languageBooks];
+console.log("All Books:",allBooks);
+
+
+
+function totalPrice(...prices){
+
+let total = 0;
+
+for(let i=0;i<prices.length;i++){
+total += prices[i];
+}
+
+console.log("Total:",total);
 
 }
 
+totalPrice(800,700,600,500);
 
 
-let searchBar = document.getElementById("searchBar");
-searchBar.addEventListener("keyup", function(){
 
-let filter = searchBar.value.toLowerCase();
+function greet(name,callback){
 
-let books = document.querySelectorAll(".book");
-books.forEach(function(book){
+console.log("Hello "+name);
 
-let title = book.querySelector("h3").innerText.toLowerCase();
+callback();
 
-if(title.includes(filter)){
-book.style.display="block";
 }
-else{
-book.style.display="none";
+
+function bye(){
+console.log("Thank you for visiting bookstore");
+}
+
+greet("Prem",bye);
+
+function buyBook(book){
+
+return new Promise(function(resolve,reject){
+
+let success=true;
+
+if(success){
+resolve(`You bought ${book}`);
+}else{
+reject("Payment Failed");
 }
 
 });
 
-});
+}
+
+buyBook("Python")
+.then(result=>console.log(result))
+.catch(error=>console.log(error));
+
+
+function orderBook(){
+
+return new Promise(resolve=>{
+
+setTimeout(()=>{
+resolve("Order completed");
+},2000)
+
+})
+
+}
+
+async function processOrder(){
+
+let result = await orderBook();
+
+console.log(result);
+
+}
+
+processOrder();
+
+function createCart(){
+
+let count=0;
+
+return function(){
+
+count++;
+
+return count;
+
+}
+
+}
+
+let cartCounter = createCart();
+
+
+let cartItems=[];
+let cartCount=document.getElementById("cartCount");
+
+function addToCart(book,price){
+
+cartItems.push({book,price});
+
+let count=cartCounter();
+
+cartCount.innerText=count;
+
+console.log(`${book} added to cart`);
+
+}
+

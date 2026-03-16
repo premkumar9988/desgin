@@ -1,23 +1,23 @@
 body{
-font-family: Arial;
+font-family:Arial;
 margin:0;
 background:#f4f4f4;
 }
 
 header{
+background:#222;
+color:white;
+padding:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:#333;
-color:white;
-padding:15px;
 }
 
 header input{
 padding:8px;
 width:200px;
-border:none;
 border-radius:5px;
+border:none;
 }
 
 .cart{
@@ -35,37 +35,32 @@ padding:20px;
 background:white;
 padding:15px;
 border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
 text-align:center;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.book:hover{
-transform:scale(1.05);
 }
 
 .book img{
 width:120px;
-height:180px;
+height:150px;
 object-fit:cover;
 }
 
-.book button{
-background:#007BFF;
-color:white;
+button{
+background:#ff9900;
 border:none;
-padding:10px;
-border-radius:5px;
+padding:8px 12px;
+margin-top:10px;
 cursor:pointer;
+border-radius:5px;
 }
 
-.book button:hover{
-background:#0056b3;
+button:hover{
+background:#e68a00;
 }
 
 footer{
 text-align:center;
-padding:10px;
-background:#333;
+padding:15px;
+background:#222;
 color:white;
 }
